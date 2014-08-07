@@ -6,7 +6,6 @@ var https = require("https");
 //AW Can only get 502 from github and no content length (when you don't prefix path with '/')
 // Now get 302 like chrome
 // Not all sites advertize content length, stackoverflow does!!
-//https://awashbrook:Tibco123@github.com/danwrong/restler/archive/3.1.0.tar.gz
 //url = "https://github.com/danwrong/restler/archive/3.1.0.tar.gz";
 //var options = {
 //  host: 'github.com',
@@ -23,10 +22,8 @@ var https = require("https");
 // Unlike curl and chrome, Node does not get Content-Length from SAMI BIN with HEAD, only with GET.
 // In both cases error code is bad-request 400...
 
-// https://s.sa.robot:Manager2010@sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
 var options = {
   method: 'HEAD',
-  auth: 's.sa.robot:Manager2010',
   // BE VERY CAREFUL to PREFIX path with '/' or you get all kinds of 4xx or 5xx errors
 //  path: '/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm', // Empty
   path: '/binarystore/Releases/Mount17/cpit_compass/puppet-master-package-1.0.10.auto-17.tar',
