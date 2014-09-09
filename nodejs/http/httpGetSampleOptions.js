@@ -18,22 +18,13 @@ var http = require("https");
 //  host: 'www.google.co.uk'
 //};
 
-//https://awashbrook:Tibco123@github.com/danwrong/restler/archive/3.1.0.tar.gz
 //url = "https://github.com/danwrong/restler/archive/3.1.0.tar.gz";
 //var options = {
-//  auth: 'awashbrook:Tibco123',
 //  host: 'github.com',
 //  method: 'GET',
 //  path: 'danwrong/restler/archive/3.1.0.tar.gz'
 //};
 
-//// https://s.sa.robot:Manager2010@sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
-//var options = {
-//  auth: 's.sa.robot:Manager2010',
-//  host: 'sami.cdt.int.thomsonreuters.com',
-//  path: 'binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm',
-//  method: 'GET'
-//};
 
 // AW This one works on internet / not with proxies, does node respect HTTP_PROXY?!
 // Returns 200 and sets Content-Length - doesn't work with https site?
