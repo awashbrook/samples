@@ -8,16 +8,15 @@ var https = require("https");
 // Check for empty packageurl as frequently empty files are uploaded to SAMI-BIN Release Share
 // Use HTTP HEAD to verify that "Content-Length" is specified
 // Zero-length file release-0.1.0-478.x86_64.rpm have no "Content-Length" header at all!
-// e.g.  curl --head https://s.sa.robot:Manager2010@sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
+// e.g.  curl --head https://sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
 //
 //  Such Zero bytes file in SAMI BIN still has valid HASH!!!!!
 //  https://sami-admin.cdt.int.thomsonreuters.com//MD5Hash.ashx/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
 
 function samiHeadCall(package, cb) {
-  // https://s.sa.robot:Manager2010@sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
+  // https://sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/release-0.1.0-478.x86_64.rpm
   var options = {
     method: 'HEAD',
-    auth: 's.sa.robot:Manager2010',
     // BE VERY CAREFUL to PREFIX path with '/' or you get all kinds of 4xx or 5xx errors
     path: '/binarystore/Releases/Mount17/cpit_compass/' + package,
     host: 'sami.cdt.int.thomsonreuters.com'
