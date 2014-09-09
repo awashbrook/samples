@@ -36,7 +36,7 @@ var version = args[1];
 //var cudlApi = "http://ermt-app-tst.emea1.ciscloud/api/v1/componentversions";
 //var httpRepoUrl = "http://pcpuppetmoma.amers1.ciscloud/puppet-master-package-1.0.10.auto-2.tar";
 //var httpRepoUrl = "http://upg-fileserver.emea1.ciscloud/compass/";
-var httpRepoUrl = "https://s.sa.robot:Manager2010@sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/"
+var httpRepoUrl = "https://sami.cdt.int.thomsonreuters.com/binarystore/Releases/Mount17/cpit_compass/"
 
 var componentversion = JSON.stringify({
   platform: "compass",
